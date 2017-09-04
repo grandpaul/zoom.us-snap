@@ -83,15 +83,15 @@ Note: pbuilder-dist is in ubuntu-dev-tools package. Please install it first.
     ~~~
     
  10. Install zoom inside chroot
-    ~~~
-    apt update
-    apt install zoom
-    ~~~
+     ~~~
+     apt update
+     apt install zoom
+     ~~~
     
  11. Run snapcraft
-    ~~~
-    snapcraft
-    ~~~
+     ~~~
+     snapcraft
+     ~~~
 
 Now you have your snap package generated in /tmp/p1/zoom.us-snap
 
