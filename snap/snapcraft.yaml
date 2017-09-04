@@ -1,0 +1,63 @@
+name: zoom
+version: '2.0.98253.0707'
+summary: zoom.us client
+description:
+ Shit client
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs and slots
+
+apps:
+  zoom:
+    command: desktop-launch zoom
+    plugs:
+      - alsa
+      - browser-support
+      - camera
+      - network
+      - opengl
+      - pulseaudio
+      - raw-usb
+      - x11
+    desktop: usr/share/applications/Zoom.desktop
+
+parts:
+  base:
+    plugin: nil
+    after:
+      - desktop-qt5
+
+  zoom:
+    plugin: nil
+    stage-packages:
+      - zoom
+      - libasound2
+      - libglew1.13
+      - libglu1-mesa
+      - libnss3
+      - libpulse0
+      - libqt5core5a
+      - libqt5dbus5
+      - libqt5gui5
+      - libqt5multimediawidgets5
+      - libqt5network5
+      - libqt5opengl5
+      - libqt5positioning5
+      - libqt5qml5
+      - libqt5quick5
+      - libqt5script5
+      - libqt5webkit5
+      - libqt5widgets5
+      - libxss1
+      - libxtst6
+    after:
+      - base
+    organize:
+      opt/zoom/zoom: opt/zoom/zoom.snap
+
+  local:
+    source: ./local
+    plugin: dump
+    after:
+      - zoom
+    organize:
+      zoom: opt/zoom/zoom
