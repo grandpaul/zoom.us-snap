@@ -1,6 +1,14 @@
 # zoom.us snap package
 ===========================
 
+## Abandoned 
+
+This repo is abandoned and will be removed soon. It seems to me that zoom.us is officially maintained on flathub.
+So for people who want to use zoom.us please go to flathub instead.
+https://flathub.org/apps/details/us.zoom.Zoom
+
+
+
 "zoom.us" is a client to connect https://zoom.us/ - a conference website.
 However, official site provides a deb package for installation which is
 quite dangerous for the system. Now Ubuntu provides a new packaging format
